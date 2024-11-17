@@ -18,10 +18,10 @@ RUN pip3 install "git+https://github.com/stanford-futuredata/megablocks.git"
 RUN pip3 install "git+https://github.com/vllm-project/vllm.git"
 RUN pip3 install "xformers==0.0.23" "transformers==4.36.0" "fschat[model_worker]==0.2.34"
 
-RUN git clone https://github.com/NVIDIA/apex && \
-    cd apex && git checkout 2386a912164b0c5cfcd8be7a2b890fbac5607c82 && \
-    sed -i '/check_cuda_torch_binary_vs_bare_metal(CUDA_HOME)/d' setup.py && \
-    python3 setup.py install --cpp_ext --cuda_ext
+#RUN git clone https://github.com/NVIDIA/apex && \
+#    cd apex && git checkout 2386a912164b0c5cfcd8be7a2b890fbac5607c82 && \
+#    sed -i '/check_cuda_torch_binary_vs_bare_metal(CUDA_HOME)/d' setup.py && \
+#    python3 setup.py install --cpp_ext --cuda_ext
 
 
 COPY entrypoint.sh .
