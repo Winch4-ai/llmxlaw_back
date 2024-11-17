@@ -24,7 +24,7 @@ RUN git clone https://github.com/NVIDIA/apex && \
     python3 setup.py install --cpp_ext --cuda_ext
 
 
-COPY deploy/entrypoint.sh .
+COPY ./mistral-inference/deploy/entrypoint.sh .
 
 RUN chmod +x /workspace/entrypoint.sh
 
