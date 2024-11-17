@@ -6,6 +6,6 @@ safetensors
 tensorboard
 tqdm
 
-torch==1.9.0+cpu
+torch==2.1.1
 triton==2.2
 xformers==0.0.24
