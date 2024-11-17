@@ -11,7 +11,7 @@ RUN apt update && \
 # https://developer.nvidia.com/cuda-gpus
 ENV TORCH_CUDA_ARCH_LIST "7.0;7.2;7.5;8.0;8.6;8.9;9.0"
 
-RUN pip3 install "torch==2.2"+cpu
+RUN pip3 install "torch==2.1.1"
 
 # This build is slow but NVIDIA does not provide binaries. Increase MAX_JOBS as needed.
 RUN pip3 install "git+https://github.com/stanford-futuredata/megablocks.git"
